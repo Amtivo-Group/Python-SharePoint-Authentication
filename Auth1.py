@@ -36,7 +36,3 @@ except Exception as e:
     print(f"Failed to connect to SharePoint: {e}")
     sys.exit(1)
 
-# File path on SharePoint
-file_url = f"/sites/YourSite/{document_library}/{excel_filename}"
-
-print(file_url)
