@@ -11,8 +11,8 @@ sharepoint_site = ""
 document_library = ""
 excel_filename = ""
 
-username = "" # Suggest an Env.py or Config.py file
-password = ""
+username = os.getenv('userEmail') # Suggest an Env.py or Config.py file
+password = os.getenv('userPassword')
 
 
 # ----------------------------------------
