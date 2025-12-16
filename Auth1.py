@@ -3,22 +3,25 @@ from office365.runtime.auth.user_credential import UserCredential
 import pandas as pd
 import os
 
-
+print(F"Config Started.")
 # ----------------------------------------
 # CONFIGURATION
 # ----------------------------------------
-sharepoint_site = ""
+sharepoint_site = "https://britishassessmentbureau.sharepoint.com/sites/FPA"
 document_library = ""
 excel_filename = ""
 
 username = os.getenv('userEmail') # Suggest an Env.py or Config.py file
 password = os.getenv('userPassword')
 
+print(F"Config Complete. Trying to connect")
+
 
 # ----------------------------------------
 # CONNECT TO SHAREPOINT
 # ----------------------------------------
 try:
+    print("Trying to connect.......")
     ctx = ClientContext(sharepoint_site).with_credentials(
         UserCredential(username, password)
     )
